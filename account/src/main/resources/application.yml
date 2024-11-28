@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:{포트번호}/{데이터베이스 이름}?useSSL=false&serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: root
+    password: { root password }
+
+  application:
+    name: NHN Academy - Mini Dooray
+  jpa:
+    open-in-view: false
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        use_sql_comments: true
+        highlight_sql: true
+        auto_quote_keyword: true
+
+logging:
+  level:
+    org.hibernate.orm.jdbc.bind: trace
+    org.springframework.transaction.interceptor: trace
